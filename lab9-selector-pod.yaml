@@ -7,4 +7,4 @@ spec:
     - name: cuda-test
       image: "yanivomc/spring-music:latest"
   nodeSelector:
-    env: run
+    db: run
