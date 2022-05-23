@@ -20,5 +20,6 @@ spec:
    - containerPort: 8080
  volumes:
   - name: app-storage
-    HostPath: /tmp/files  
-
+    hostPath:
+      # directory location on host
+      path: /tmp/files
