@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: ReplicaSet
+metadata:
+  name: shysh-rs
+  labels:
+    app: myapp
+    type: frontend
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      tier: frontend
+  template:
+    metadata:
+      name: shysh-spring-pod   
+      labels:
+        app: myapp
+        tier: frontend
+    spec:
+      containers:
+      - name: shysh-app
+        image: yanivomc/spring-music:latest
+        ports: 
+        - containerPort: 8080    
+       
