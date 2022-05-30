@@ -12,10 +12,10 @@ spec:
         podAffinityTerm:
           labelSelector:
             matchExpressions:
-            - key: security 
+            - key: type 
               operator: In 
               values:
-              - S2
+              - mysql
           topologyKey: kubernetes.io/hostname
   containers:
     - name: redis
