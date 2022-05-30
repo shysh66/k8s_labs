@@ -7,16 +7,15 @@ metadata:
 spec:
   affinity:
     podAntiAffinity: 
-      preferredDuringSchedulingIgnoredDuringExecution: 
-      - weight: 100  
-        podAffinityTerm:
-          labelSelector:
-            matchExpressions:
-            - key: type 
-              operator: In 
-              values:
-              - mysql
-          topologyKey: kubernetes.io/hostname
+      requiredDuringSchedulingIgnoredDuringExecution:
+      - labelSelector:
+          matchExpressions:
+          - key: app
+            operator: In
+            values:
+            - mysql
+        topologyKey: "kubernetes.io/hostname"
   containers:
     - name: redis
       image: supergiantkir/animals:bear 
+      
