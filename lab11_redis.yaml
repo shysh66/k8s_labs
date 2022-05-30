@@ -13,7 +13,7 @@ spec:
           - key: app
             operator: In
             values:
-            - mysql
+            - mysql-pod
         topologyKey: "kubernetes.io/hostname"
   containers:
     - name: redis
