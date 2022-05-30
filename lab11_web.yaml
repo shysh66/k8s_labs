@@ -1,20 +1,20 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: web-server-pod
+  name: web-pod
   labels:
-    name: web-server-pod
+    type: web-pod
 spec:
   affinity:
-    podAffinity: 
+    podAffinity:
       requiredDuringSchedulingIgnoredDuringExecution:
       - labelSelector:
           matchExpressions:
-          - key: app
+          - key: type
             operator: In
             values:
-            - mysql-pod
-        topologyKey: "kubernetes.io/hostname"
+            - redis-pod
+        topologyKey: kubernetes.io/hostname
   containers:
-    - name: web-server
-      image: supergiantkir/animals:bear 
+  - name: web-pod
+    image: supergiantkir/animals:bear
