@@ -12,7 +12,7 @@ spec:
         podAffinityTerm:
           labelSelector:
             matchExpressions:
-            - key: mysql-pod 
+            - key: security 
               operator: In 
               values:
               - S2
