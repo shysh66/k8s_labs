@@ -4,7 +4,6 @@ metadata:
   name: green-deployment
   labels:
     app: app2
-    test: test123
 spec:
   replicas: 2
   selector:
