@@ -4,7 +4,6 @@ metadata:
   name: blue-deployment
   labels:
     app: app1
-    test: test123
 spec:
   replicas: 2
   selector:
