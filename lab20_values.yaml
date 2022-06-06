@@ -1,0 +1,4 @@
+dbname: "orcale"
+dbtable: "music"
+image: "yanivomc/spring-music"
+tag: "latest"
